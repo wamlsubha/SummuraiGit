@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SummaryTime</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/angular.min.v1.5.5.js"></script>
+		<script src="js/angular-animate.min.js"></script>
+	</head>
+	<body>
+		<!--<div ng-show="online">You're online</div>-->
+		<div ng-hide="online">
+			<div class="tl-offline text-center">
+				<span class="tl-offline-text">You're offline</span>
+			</div>
+		</div>
+ 		
+		<ng-view anim-class class="view"></ng-view>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/angular-cookies.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="app-services/flash.service.js"></script>
+		<script src="app-services/user.service.local-storage.js"></script>
+
+    <script src="mvc/home/home.controller.js"></script>
+    <script src="mvc/login/login.controller.js"></script>
+	</body>
+</html>

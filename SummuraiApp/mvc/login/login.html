@@ -1,0 +1,21 @@
+﻿<div class="tl-your-login-Part">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>summurai</h1>
+				<div class="summai_icon"><img src="images/summurai_icon.png" alt=""/></div>
+				<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+				<form id="frm_login" class="form-signin" method="post" ng-submit="vm.login()">
+					<div class="tl-login">
+						<div class="account-wall">
+							<input type="email" class="form-control" placeholder="Email" ng-model="vm.email" required autofocus>
+							<input type="password" class="form-control" placeholder="Password" ng-model="vm.password"  required>
+						</div>
+					</div>
+					<div class="tl-login-btn login-top"><button type="submit" class="btn pink-btn" ng-disabled="form.$invalid || vm.dataLoading">Login</button></div>
+				</form>
+				<p class="tl-orTxt">or register online</p>
+			</div>
+		</div>
+	</div>
+</div>
